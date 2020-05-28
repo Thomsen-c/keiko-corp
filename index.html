@@ -6,7 +6,6 @@
 	<!--  App Description  -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
-	<link rel="stylesheet" type="text/css" href="css/owl.transitions.css"/>
 	<link rel="stylesheet" type="text/css" href="css/owl.carousel.css"/>
 	<link rel="stylesheet" type="text/css" href="css/animate.css"/>
 	<link rel="stylesheet" type="text/css" href="css/main.css"/>
@@ -98,7 +97,23 @@
 		</div>
 	</section>
 	<!--  End Featured On Section  -->
+<script type="text/javascript">
+	const loadStyleSheet = src => {
+		if(document.createStylesheet){
+			document.createStylesheet(src)
+		} else {
+			const stylesheet = document.createElement('link');
+			stylesheet.href = src;
+			stylesheet.type = 'text/css';
+			stylesheet.rel = 'stylesheet';
+			document.getElementsByTagName('head')[0].appendChild(stylesheet)
+		}
+	}
 
+	window.onload = function(){
+		loadStyleSheet("css/owl.transitions.css")
+	}
+</script>
 
 
 
